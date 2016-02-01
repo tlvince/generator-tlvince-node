@@ -1,0 +1,44 @@
+{
+  "name": "<%= moduleName %>",
+  "version": "0.0.0",
+  "description": "<%= description %>",
+  "main": "index.js",
+  <% if (cli) { %>
+  "bin": "cli.js",<% } %>
+  "scripts": {
+    "pretest": "standard",
+    "test": "tape test.js | tap-spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/<%= githubUsername %>/<%= moduleName %>.git"
+  },
+  "keywords": [<% if (cli) { %>
+    "cli-app",
+    "cli",<% } %>
+    ""
+  ],
+  "author": "<%= name %> <<%= email %>> (<%= website %>)",
+  "engines": {
+    "node": ">=4"
+  },
+  "bugs": {
+    "url": "https://github.com/<%= githubUsername %>/<%= moduleName %>/issues"
+  },
+  "homepage": "https://github.com/<%= githubUsername %>/<%= moduleName %>#readme",
+  "dependencies": {<% if (cli) { %>
+    "meow": "^3.6.0"
+  <% } %>},
+  "devDependencies": {
+    "standard": "^5.4.1",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.4.0"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "files": [
+    "index.js"<% if (cli) { %>,
+    "cli.js"<% } %>
+  ]
+}

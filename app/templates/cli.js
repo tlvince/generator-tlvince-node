@@ -1,0 +1,22 @@
+#!/usr/bin/env node
+
+'use strict'
+
+var meow = require('meow')
+var <%= camelModuleName %> = require('./')
+
+var cli = meow([
+  'Usage',
+  '  $ <%= moduleName %> [input]',
+  '',
+  'Options',
+  '  --foo  Lorem ipsum. [Default: false]',
+  '',
+  'Examples',
+  '  $ <%= moduleName %>',
+  '  hello world',
+  '  $ <%= moduleName %> coffee',
+  '  hello coffee'
+])
+
+console.log(<%= camelModuleName %>(cli.input[0]))

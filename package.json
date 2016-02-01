@@ -1,0 +1,61 @@
+{
+  "name": "generator-tlvince-node",
+  "description": "Scaffold out a node module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tlvince/generator-tlvince-node.git"
+  },
+  "author": "Tom Vincent <github@tlvince.com> (https://github.com/tlvince)",
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "pretest": "standard",
+    "test": "mocha",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "yeoman-generator",
+    "plugin",
+    "boilerplate",
+    "template",
+    "scaffold",
+    "node",
+    "module",
+    "node_module",
+    "node-module",
+    "init",
+    "tlvince"
+  ],
+  "dependencies": {
+    "generator-license": "3.1.1",
+    "generator-readme": "1.0.0",
+    "inquirer-npm-name": "^1.0.0",
+    "lodash.camelcase": "^4.0.1",
+    "lodash.kebabcase": "^3.1.1",
+    "normalize-url": "1.2.0",
+    "underscore.string": "3.0.3",
+    "yeoman-generator": "0.22.1"
+  },
+  "devDependencies": {
+    "mocha": "^2.4.5",
+    "standard": "^5.4.1",
+    "yeoman-assert": "^2.1.1",
+    "yeoman-test": "^1.0.0",
+    "semantic-release": "^4.3.5"
+  },
+  "standard": {
+    "ignore": [
+      "app/templates"
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/tlvince/generator-tlvince-node/issues"
+  },
+  "homepage": "https://github.com/tlvince/generator-tlvince-node#readme",
+  "main": "test.js"
+}
