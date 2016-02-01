@@ -33,20 +33,20 @@
   ],
   "dependencies": {
     "generator-license": "3.1.1",
-    "generator-readme": "1.0.0",
-    "inquirer-npm-name": "^1.0.0",
-    "lodash.camelcase": "^4.0.1",
-    "lodash.kebabcase": "^3.1.1",
+    "generator-readme": "1.0.1",
+    "inquirer-npm-name": "1.0.0",
+    "lodash.camelcase": "4.0.1",
+    "lodash.kebabcase": "3.1.1",
     "normalize-url": "1.2.0",
     "underscore.string": "3.0.3",
     "yeoman-generator": "0.22.1"
   },
   "devDependencies": {
-    "mocha": "^2.4.5",
-    "standard": "^5.4.1",
-    "yeoman-assert": "^2.1.1",
-    "yeoman-test": "^1.0.0",
-    "semantic-release": "^4.3.5"
+    "mocha": "2.4.5",
+    "standard": "5.4.1",
+    "yeoman-assert": "2.1.1",
+    "yeoman-test": "1.0.0",
+    "semantic-release": "4.3.5"
   },
   "standard": {
     "ignore": [
