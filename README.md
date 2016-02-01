@@ -4,7 +4,7 @@
 [![npm version][npm-image]][npm-url]
 [![License][license-image]][license-url]
 
-[travis-url]: https://travis-ci.com/tlvince/generator-tlvince-node
+[travis-url]: https://travis-ci.org/tlvince/generator-tlvince-node
 [travis-image]: https://img.shields.io/travis/tlvince/generator-tlvince-node.svg
 [npm-url]: https://www.npmjs.com/package/generator-tlvince-node
 [npm-image]: https://img.shields.io/npm/v/generator-tlvince-node.svg
