@@ -15,11 +15,11 @@ module.exports = yeoman.Base.extend({
         name: 'moduleName',
         message: 'What do you want to name your module?',
         default: this.appname.replace(/\s/g, '-'),
-        filter: x => kebabCase(x),
+        filter: (x) => kebabCase(x),
         validate: function (str) {
           return str.length > 0
         }
-      }, this, name => {
+      }, this, (name) => {
         this.props = {
           moduleName: name
         }
@@ -33,7 +33,7 @@ module.exports = yeoman.Base.extend({
         {
           name: 'description',
           message: 'What is the module description?',
-          validate: x => {
+          validate: (x) => {
             if (!x.length) {
               return 'You have to provide a description'
             }
@@ -42,20 +42,20 @@ module.exports = yeoman.Base.extend({
             }
             return true
           },
-          filter: x => x.trim().charAt(0).toUpperCase() + x.trim().slice(1)
+          filter: (x) => x.trim().charAt(0).toUpperCase() + x.trim().slice(1)
         },
         {
           name: 'githubUsername',
           message: 'What is your GitHub username?',
           store: true,
-          validate: x => x.length > 0 ? true : 'You have to provide a username'
+          validate: (x) => x.length > 0 ? true : 'You have to provide a username'
         },
         {
           name: 'website',
           message: 'What is the URL of your website?',
           store: true,
-          validate: x => x.length > 0 ? true : 'You have to provide a website URL',
-          filter: x => normalizeUrl(x)
+          validate: (x) => x.length > 0 ? true : 'You have to provide a website URL',
+          filter: (x) => normalizeUrl(x)
         },
         {
           name: 'cli',
@@ -63,7 +63,7 @@ module.exports = yeoman.Base.extend({
           type: 'confirm',
           default: false
         }
-      ], props => {
+      ], (props) => {
         Object.assign(this.props, props)
         this.props.name = this.user.git.name()
         this.props.email = this.user.git.email()
