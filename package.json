@@ -38,7 +38,7 @@
     "lodash.camelcase": "4.1.1",
     "lodash.kebabcase": "4.0.1",
     "normalize-url": "1.5.3",
-    "yeoman-generator": "0.22.6"
+    "yeoman-generator": "0.23.1"
   },
   "devDependencies": {
     "mocha": "2.5.3",
