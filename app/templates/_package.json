@@ -6,8 +6,11 @@
   <% if (cli) { %>
   "bin": "cli.js",<% } %>
   "scripts": {
+    "tap": "tap 'test/unit/**/*.js'",
     "pretest": "standard",
-    "test": "tape test.js | tap-spec"
+    "test": "npm run tap",
+    "test:coverage": "npm run -s tap -- --cov --coverage-report=lcov",
+    "test:watch": "chokidar '**/*.js' -c 'npm run -s tap' --initial -i node_modules -i coverage"
   },
   "repository": {
     "type": "git",
@@ -20,19 +23,18 @@
   ],
   "author": "<%= name %> <<%= email %>> (<%= website %>)",
   "engines": {
-    "node": ">=4"
+    "node": ">=5"
   },
   "bugs": {
     "url": "https://github.com/<%= githubUsername %>/<%= moduleName %>/issues"
   },
   "homepage": "https://github.com/<%= githubUsername %>/<%= moduleName %>#readme",
   "dependencies": {<% if (cli) { %>
-    "meow": "^3.6.0"
+    "meow": "^3.7.0"
   <% } %>},
   "devDependencies": {
-    "standard": "^5.4.1",
-    "tap-spec": "^4.1.1",
-    "tape": "^4.4.0"
+    "standard": "^7.1.2",
+    "tap": "^5.8.0"
   },
   "directories": {
     "test": "test"
