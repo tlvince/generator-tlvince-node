@@ -9,9 +9,7 @@ const normalizeUrl = require('normalize-url')
 module.exports = yeoman.Base.extend({
   prompting: {
     askForModuleName: function () {
-      const done = this.async()
-
-      askName({
+      return askName({
         name: 'moduleName',
         message: 'What do you want to name your module?',
         default: this.appname.replace(/\s/g, '-'),
@@ -19,17 +17,13 @@ module.exports = yeoman.Base.extend({
         validate: function (str) {
           return str.length > 0
         }
-      }, this, (name) => {
-        this.props = {
-          moduleName: name
-        }
-        done()
-      })
+      }, this)
+      .then(function (moduleName) {
+        this.props = Object.assign({}, moduleName)
+      }.bind(this))
     },
     askFor: function () {
-      const done = this.async()
-
-      this.prompt([
+      return this.prompt([
         {
           name: 'description',
           message: 'What is the module description?',
@@ -63,12 +57,12 @@ module.exports = yeoman.Base.extend({
           type: 'confirm',
           default: false
         }
-      ], (props) => {
+      ])
+      .then(function (props) {
         Object.assign(this.props, props)
         this.props.name = this.user.git.name()
         this.props.email = this.user.git.email()
-        done()
-      })
+      }.bind(this))
     }
   },
   default: {

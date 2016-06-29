@@ -8,7 +8,7 @@
   },
   "author": "Tom Vincent <github@tlvince.com> (https://github.com/tlvince)",
   "engines": {
-    "node": ">=4"
+    "node": ">=5"
   },
   "scripts": {
     "pretest": "standard",
@@ -34,15 +34,15 @@
   "dependencies": {
     "generator-license": "4.0.0",
     "generator-readme": "1.1.0",
-    "inquirer-npm-name": "1.0.0",
+    "inquirer-npm-name": "2.0.0",
     "lodash.camelcase": "4.1.1",
     "lodash.kebabcase": "4.0.1",
     "normalize-url": "1.5.3",
-    "yeoman-generator": "0.22.6"
+    "yeoman-generator": "0.23.4"
   },
   "devDependencies": {
     "mocha": "2.5.3",
-    "standard": "7.1.1",
+    "standard": "7.1.2",
     "yeoman-assert": "2.2.1",
     "yeoman-test": "1.4.0",
     "semantic-release": "4.3.5"
