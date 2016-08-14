@@ -64,7 +64,7 @@
   "config": {
     "ghooks": {
       "commit-msg": "validate-commit-msg",
-      "pre-push": "npm test"
+      "pre-push": "npm test && npm run prepublish"
     }
   }
 }
