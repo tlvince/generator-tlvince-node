@@ -13,6 +13,7 @@ describe('generator', () => {
       .withPrompts({
         moduleName: 'this is good',
         description: 'Nice',
+        keywords: [],
         githubUser: 'tlvince',
         website: 'https://tlvince.com',
         license: 'MIT'
