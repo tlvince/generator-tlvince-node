@@ -16,11 +16,7 @@
     "type": "git",
     "url": "git+https://github.com/<%= githubUsername %>/<%= moduleName %>.git"
   },
-  "keywords": [<% if (cli) { %>
-    "cli-app",
-    "cli",<% } %>
-    ""
-  ],
+  "keywords": <%- JSON.stringify(keywords, null, 2) %>,
   "author": "<%= name %> <<%= email %>> (<%= website %>)",
   "engines": {
     "node": ">=5"

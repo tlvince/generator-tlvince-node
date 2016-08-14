@@ -39,6 +39,12 @@ module.exports = yeoman.Base.extend({
           filter: (x) => x.trim().charAt(0).toUpperCase() + x.trim().slice(1)
         },
         {
+          name: 'keywords',
+          message: 'What are the keywords of this module (comma separated)?',
+          validate: (x) => x.length > 0 ? true : 'You have to provide some keywords',
+          filter: (x) => x.split(',').map(k => k.trim()).filter(k => k)
+        },
+        {
           name: 'githubUsername',
           message: 'What is your GitHub username?',
           store: true,
@@ -84,6 +90,7 @@ module.exports = yeoman.Base.extend({
         options: {
           appname: this.props.moduleName,
           description: this.props.description,
+          keywords: this.props.keywords,
           author: this.props.name,
           email: this.props.email,
           website: this.props.website,
@@ -105,6 +112,10 @@ module.exports = yeoman.Base.extend({
     const tpl = Object.assign({}, this.props, {
       camelModuleName: camelCase(this.props.moduleName)
     })
+
+    if (tpl.cli) {
+      tpl.keywords = tpl.keywords.concat(['cli', 'cli-app'])
+    }
 
     const mv = (from, to) => {
       this.fs.move(this.destinationPath(from), this.destinationPath(to))
