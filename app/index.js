@@ -133,6 +133,7 @@ module.exports = yeoman.Base.extend({
     mv('editorconfig', '.editorconfig')
     mv('gitattributes', '.gitattributes')
     mv('gitignore', '.gitignore')
+    mv('npmrc', '.npmrc')
     mv('vimrc', '.vimrc')
     mv('_package.json', 'package.json')
 

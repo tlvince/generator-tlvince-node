@@ -19,20 +19,20 @@
   "keywords": <%- JSON.stringify(keywords, null, 2) %>,
   "author": "<%= name %> <<%= email %>> (<%= website %>)",
   "engines": {
-    "node": ">=5"
+    "node": ">=6"
   },
   "bugs": {
     "url": "https://github.com/<%= githubUsername %>/<%= moduleName %>/issues"
   },
   "homepage": "https://github.com/<%= githubUsername %>/<%= moduleName %>#readme",
   "dependencies": {<% if (cli) { %>
-    "meow": "^3.7.0"
+    "meow": "3.7.0"
   <% } %>},
   "devDependencies": {
-    "ghooks": "^1.3.2",
-    "standard": "^7.1.2",
-    "tap": "^5.8.0",
-    "validate-commit-msg": "^2.7.0"
+    "ghooks": "1.3.2",
+    "standard": "7.1.2",
+    "tap": "6.3.2",
+    "validate-commit-msg": "2.7.0"
   },
   "directories": {
     "test": "test"
