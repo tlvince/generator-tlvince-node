@@ -8,7 +8,7 @@
   },
   "author": "Tom Vincent <github@tlvince.com> (https://github.com/tlvince)",
   "engines": {
-    "node": ">=5"
+    "node": ">=6"
   },
   "scripts": {
     "pretest": "standard",

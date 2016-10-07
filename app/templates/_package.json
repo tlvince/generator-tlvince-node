@@ -19,7 +19,7 @@
   "keywords": <%- JSON.stringify(keywords, null, 2) %>,
   "author": "<%= name %> <<%= email %>> (<%= website %>)",
   "engines": {
-    "node": ">=5"
+    "node": ">=6"
   },
   "bugs": {
     "url": "https://github.com/<%= githubUsername %>/<%= moduleName %>/issues"
