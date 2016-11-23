@@ -135,6 +135,7 @@ module.exports = yeoman.Base.extend({
     mv('gitignore', '.gitignore')
     mv('vimrc', '.vimrc')
     mv('npmrc', '.npmrc')
+    mv('travis.yml', '.travis.yml')
     mv('_package.json', 'package.json')
 
     done()
