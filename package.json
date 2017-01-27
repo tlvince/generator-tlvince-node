@@ -11,9 +11,11 @@
     "node": ">=6"
   },
   "scripts": {
+    "commitmsg": "validate-commit-msg",
+    "prepush": "npm test",
     "pretest": "standard",
-    "test": "mocha",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "test": "mocha"
   },
   "files": [
     "app"
@@ -41,7 +43,7 @@
     "yeoman-generator": "0.24.1"
   },
   "devDependencies": {
-    "ghooks": "1.3.2",
+    "husky": "0.13.1",
     "mocha": "3.1.2",
     "semantic-release": "6.3.2",
     "standard": "8.6.0",
@@ -58,11 +60,5 @@
     "url": "https://github.com/tlvince/generator-tlvince-node/issues"
   },
   "homepage": "https://github.com/tlvince/generator-tlvince-node#readme",
-  "main": "test.js",
-  "config": {
-    "ghooks": {
-      "commit-msg": "validate-commit-msg",
-      "pre-push": "npm test"
-    }
-  }
+  "main": "test.js"
 }
