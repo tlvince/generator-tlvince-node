@@ -32,10 +32,10 @@
   <% } %>},
   "devDependencies": {
     "chokidar-cli": "1.2.0",
-    "husky": "0.12.0",
-    "standard": "8.5.0",
-    "tap": "8.0.0",
-    "validate-commit-msg": "2.8.2"
+    "husky": "0.13.1",
+    "standard": "8.6.0",
+    "tap": "9.0.3",
+    "validate-commit-msg": "2.11.1"
   },
   "directories": {
     "test": "test"
