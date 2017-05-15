@@ -1,12 +1,12 @@
 'use strict'
 
-const yeoman = require('yeoman-generator')
+const Generator = require('yeoman-generator')
 const askName = require('inquirer-npm-name')
 const kebabCase = require('lodash.kebabcase')
 const camelCase = require('lodash.camelcase')
 const normalizeUrl = require('normalize-url')
 
-module.exports = yeoman.Base.extend({
+module.exports = Generator.extend({
   prompting: {
     askForModuleName: function () {
       return askName({
@@ -74,19 +74,17 @@ module.exports = yeoman.Base.extend({
   default: {
     license: function () {
       // Updates package.json for us (as well as creating LICENSE)
-      this.composeWith('license', {
+      this.composeWith(require.resolve('generator-license/app'), {
         options: {
           name: this.props.name,
           email: this.props.email,
           website: this.props.website
         }
-      }, {
-        local: require.resolve('generator-license/app')
       })
     },
 
     readme: function () {
-      this.composeWith('readme', {
+      this.composeWith(require.resolve('generator-readme/app'), {
         options: {
           appname: this.props.moduleName,
           description: this.props.description,
@@ -97,8 +95,6 @@ module.exports = yeoman.Base.extend({
           githubUser: this.props.githubUsername,
           isNodeModule: true
         }
-      }, {
-        local: require.resolve('generator-readme/app')
       })
     },
 
