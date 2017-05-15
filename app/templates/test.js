@@ -1,10 +1,8 @@
-'use strict'
+const test = require('tap').test
 
-var test = require('tap').test
+const <%= camelModuleName %> = require('./')
 
-var <%= camelModuleName %> = require('./')
-
-test('title', function (t) {
+test('title', t => {
   t.equal(<%= camelModuleName %>(), 'hello world')
   t.end()
 })
