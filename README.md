@@ -16,6 +16,14 @@
 
 > Scaffold out a node module
 
+## Related Work
+
+* [generator-nm][]
+* [generator-node-bahmutov][]
+
+[generator-nm]: https://github.com/sindresorhus/generator-nm
+[generator-node-bahmutov]: https://github.com/bahmutov/generator-node-bahmutov
+
 ## Author
 
 © 2016 Tom Vincent <git@tlvince.com> (https://tlvince.com)
