@@ -75,26 +75,22 @@ module.exports = Generator.extend({
     license: function () {
       // Updates package.json for us (as well as creating LICENSE)
       this.composeWith(require.resolve('generator-license/app'), {
-        options: {
-          name: this.props.name,
-          email: this.props.email,
-          website: this.props.website
-        }
+        name: this.props.name,
+        email: this.props.email,
+        website: this.props.website
       })
     },
 
     readme: function () {
       this.composeWith(require.resolve('generator-readme/app'), {
-        options: {
-          appname: this.props.moduleName,
-          description: this.props.description,
-          keywords: this.props.keywords,
-          author: this.props.name,
-          email: this.props.email,
-          website: this.props.website,
-          githubUser: this.props.githubUsername,
-          isNodeModule: true
-        }
+        appname: this.props.moduleName,
+        description: this.props.description,
+        keywords: this.props.keywords,
+        author: this.props.name,
+        email: this.props.email,
+        website: this.props.website,
+        githubUser: this.props.githubUsername,
+        isNodeModule: true
       })
     },
 
