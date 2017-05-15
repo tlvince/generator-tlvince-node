@@ -4,7 +4,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tlvince/generator-tlvince-node.git"
+    "url": "git+https://github.com/tlvince/generator-tlvince-node.git"
   },
   "author": "Tom Vincent <github@tlvince.com> (https://github.com/tlvince)",
   "engines": {
