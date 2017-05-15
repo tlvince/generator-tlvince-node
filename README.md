@@ -1,5 +1,7 @@
 # generator-tlvince-node
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/tlvince/generator-tlvince-node.svg)](https://greenkeeper.io/)
+
 [![Build Status][travis-image]][travis-url]
 [![npm version][npm-image]][npm-url]
 [![License][license-image]][license-url]
