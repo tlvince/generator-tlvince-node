@@ -46,7 +46,7 @@
     "semantic-release": "6.3.6",
     "standard": "10.0.2",
     "validate-commit-msg": "2.12.1",
-    "yeoman-assert": "2.2.1",
+    "yeoman-assert": "3.0.0",
     "yeoman-test": "1.5.1"
   },
   "standard": {
