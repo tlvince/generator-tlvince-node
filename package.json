@@ -41,7 +41,7 @@
     "yeoman-generator": "0.24.1"
   },
   "devDependencies": {
-    "ghooks": "1.3.2",
+    "ghooks": "2.0.0",
     "mocha": "3.4.1",
     "semantic-release": "6.3.6",
     "standard": "10.0.2",
