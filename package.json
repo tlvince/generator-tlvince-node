@@ -43,7 +43,7 @@
     "yeoman-generator": "1.1.1"
   },
   "devDependencies": {
-    "husky": "0.14.0",
+    "husky": "0.14.2",
     "mocha": "3.4.2",
     "semantic-release": "6.3.6",
     "standard": "10.0.2",
