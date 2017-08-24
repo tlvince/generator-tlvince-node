@@ -21,7 +21,8 @@
   "keywords": <%- JSON.stringify(keywords, null, 2) %>,
   "author": "<%= name %> <<%= email %>> (<%= website %>)",
   "engines": {
-    "node": ">=6"
+    "npm": ">=5.3",
+    "node": ">=6.11"
   },
   "bugs": {
     "url": "https://github.com/<%= githubUsername %>/<%= moduleName %>/issues"
@@ -32,10 +33,10 @@
   <% } %>},
   "devDependencies": {
     "chokidar-cli": "1.2.0",
-    "husky": "0.13.3",
-    "standard": "10.0.2",
-    "tap": "10.3.2",
-    "validate-commit-msg": "2.12.1"
+    "husky": "0.14.3",
+    "standard": "10.0.3",
+    "tap": "10.7.2",
+    "validate-commit-msg": "2.14.0"
   },
   "directories": {
     "test": "test"
