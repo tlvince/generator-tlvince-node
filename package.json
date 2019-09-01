@@ -40,7 +40,7 @@
     "lodash.camelcase": "4.3.0",
     "lodash.kebabcase": "4.1.1",
     "normalize-url": "1.9.1",
-    "yeoman-generator": "1.1.1"
+    "yeoman-generator": "4.0.2"
   },
   "devDependencies": {
     "husky": "0.14.3",
